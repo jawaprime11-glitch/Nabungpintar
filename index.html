@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-s>
+    <title>Nabung Pintar - Developer Iqbal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Script Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async d>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col >
+
+    <!-- === HALAMAN LOGIN === -->
+    <div id="loginScreen" class="max-w-md w-full mx-auto my-auto>
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-70>
+            <h1 class="text-xl font-black text-white">💰 NABUNG >
+            <p class="text-emerald-100 text-xs mt-1">Developer: >
+        </div>
+        <p class="text-gray-400 text-xs">Silakan login menggunak>
+
+        <!-- Tombol Google Sign-In -->
+        <div class="flex justify-center">
+            <div id="g_id_onload"
+                 data-client_id="751459442276-q7eoiah205frcmanip>
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-s>
+        </div>
+    </div>
+
+    <!-- === DASHBOARD UTAMA (TERSEMBUNYI SEBELUM LOGIN) === -->
+    <div id="dashboardScreen" class="hidden max-w-md w-full mx-a>
+        <!-- HEADER -->
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-70>
+            <div>
+                <h1 class="text-xl font-black tracking-wide text>
+                <p class="text-emerald-100 text-[10px]">Dev: Iqb>
+            </div>
+            <button onclick="location.reload()" class="bg-black/>
+        </div>
+
+        <!-- TOTAL SALDO & TARGET -->
+        <div class="bg-slate-900 border border-slate-800 p-5 rou>
+            <div class="flex justify-between items-center border>
+                <div>
+                    <p class="text-gray-400 text-xs">Total Tabun>
+                    <h2 id="totalSaldo" class="text-2xl font-bol>
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-400 text-xs">Target Impi>
+                    <p id="targetImpian" class="text-sm font-sem>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div>
+                <div class="flex justify-between text-xs text-gr>
+                    <span id="persenText">Progress: 0%</span>
+                    <span id="sisaTargetText">Kurang: Rp 1.000.0>
+                </div>
+                <div class="w-full bg-slate-800 h-3 rounded-full>
+                    <div id="progressBar" class="bg-emerald-500 >
+                </div>
